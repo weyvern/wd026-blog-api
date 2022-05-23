@@ -27,3 +27,11 @@ export const createArticle = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+export const getSingleArticle = async (req, res) => {
+  try {
+    res.json(req.article);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
